@@ -507,7 +507,7 @@ def render_card(news):
                      "윤리·사회 영향","콘텐츠·미디어",
                      "하드웨어·인프라","기타·종합"]
     
-    category_image = f"../app/static/img/{category_name.index(category)}.jpg"
+    category_image = f"https://github.com/huduby/top_news/blob/main/static/img/{category_name.index(category)}.jpg"
     
     return f"""
     <article class="news-card">
