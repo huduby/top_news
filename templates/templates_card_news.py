@@ -1,24 +1,6 @@
 from html import escape
 from pathlib import Path
 import base64
-
-def image_to_base64(image_path):
-  image_path = Path(image_path)
-
-  if not image_path.exists():
-      return ""
-
-  with open(image_path, "rb") as f:
-      encoded = base64.b64encode(f.read()).decode("utf-8")
-
-  suffix = image_path.suffix.lower().replace(".", "")
-
-  if suffix == "jpg":
-      suffix = "jpeg"
-
-  return f"data:image/{suffix};base64,{encoded}"
-
-
 def get_css():
   return """
 :root {
@@ -515,7 +497,7 @@ def render_card(news):
     keywords = news.get("keywords", [])
     source = escape(news.get("source", ""))
     published_at = escape(news.get("published", ""))
-    url = escape(news.get("url", "#"))
+    url = escape(news.get("link", "#"))
     category = escape(news.get("category", "기타"))
     ethics = escape(news.get("ethical_considerations", ""))
     index = news.get("rank", 1)
@@ -526,7 +508,7 @@ def render_card(news):
                      "하드웨어·인프라","기타·종합"]
     
     category_image = f"/app/static/img/{category_name.index(category)}.jpg"
-    category_image = image_to_base64(category_image)
+    
     return f"""
     <article class="news-card">
       <div class="card-image-wrap">
