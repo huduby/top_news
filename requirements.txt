@@ -1,0 +1,5 @@
+streamlit
+feedparser
+google-genai
+python-dotenv
+requests
