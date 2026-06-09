@@ -18,16 +18,16 @@ available_date = lb.get_available_dates(DIR_PATH)
 search_today = lb.get_today_date()
 
 # 오늘 날짜의 뉴스가 없는 경우 RSS 데이터 가져오기    
-if search_today not in available_date:
-    ## 뉴스 기사 수집
-    news_list = lb.fetch_news_articles(max_count=20)
-    # # 뉴스 기사 선정 및 카드뉴스용 JSON 생성
-    today_top_news_json = lb.get_top_n_news_data(news_list)
-    # # 테스트를 위해 json파일로 저장
-    lb.save_selected_news_json(today_top_news_json, f"data/{search_today}.json")
-    # 뉴스 기사 선정 및 카드뉴스용 JSON 생성
-    today_top_news_json = lb.load_selected_news_json(f"data/{search_today}.json")
-    available_date = lb.get_available_dates(DIR_PATH)
+# if search_today not in available_date:
+#     ## 뉴스 기사 수집
+#     news_list = lb.fetch_news_articles(max_count=20)
+#     # # 뉴스 기사 선정 및 카드뉴스용 JSON 생성
+#     today_top_news_json = lb.get_top_n_news_data(news_list)
+#     # # 테스트를 위해 json파일로 저장
+#     lb.save_selected_news_json(today_top_news_json, f"data/{search_today}.json")
+#     # 뉴스 기사 선정 및 카드뉴스용 JSON 생성
+#     today_top_news_json = lb.load_selected_news_json(f"data/{search_today}.json")
+#     available_date = lb.get_available_dates(DIR_PATH)
 
 
 #################
