@@ -29,7 +29,7 @@ search_today = lb.get_today_date()
 #     today_top_news_json = lb.load_selected_news_json(f"data/{search_today}.json")
 #     available_date = lb.get_available_dates(DIR_PATH)
 
-
+search_today = "2026-06-09"
 #################
 ## 메인 title 영역
 #################
