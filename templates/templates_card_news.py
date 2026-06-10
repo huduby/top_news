@@ -451,6 +451,151 @@ def get_css():
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
+    
+/* 사이드바 전체 배경 */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+/* 사이드바 내부 여백 */
+[data-testid="stSidebar"] > div:first-child {
+    padding: 2rem 1rem;
+}
+
+/* 사이드바 헤더 */
+.sidebar-header {
+    padding: 0.8rem 0.2rem 1rem 0.2rem;
+}
+
+.sidebar-title {
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+}
+
+.sidebar-subtitle {
+    margin-top: 0.45rem;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: #64748b;
+}
+
+/* 구분선 */
+.sidebar-divider {
+    height: 1px;
+    background: #cbd5e1;
+    margin: 1.2rem 0;
+    opacity: 0.7;
+}
+
+/* 섹션 제목 */
+.sidebar-section-title {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    background: #ede9fe;
+    color: #4c1d95;
+    font-size: 0.82rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+/* 설명 텍스트 */
+.sidebar-desc {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+}
+
+/* 오늘의 단어 카드 */
+.sidebar-word-card {
+    margin-top: 0.7rem;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 8px 22px rgba(30, 64, 175, 0.08);
+}
+
+.sidebar-word-badge {
+    display: inline-block;
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 0.72rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.sidebar-word-term {
+    font-size: 1.08rem;
+    font-weight: 900;
+    color: #059669;
+    margin-bottom: 0.6rem;
+}
+
+.sidebar-word-desc {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.65;
+}
+
+/* 키워드 칩 */
+.sidebar-keyword-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.7rem;
+}
+
+.sidebar-keyword-chip {
+    display: inline-block;
+    padding: 0.36rem 0.65rem;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    color: #1e40af;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+/* 정보 카드 */
+.sidebar-info-card {
+    margin-top: 0.7rem;
+    padding: 0.9rem;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid #e2e8f0;
+}
+
+.sidebar-info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    font-size: 0.76rem;
+    margin-bottom: 0.45rem;
+    color: #475569;
+}
+
+.sidebar-info-label {
+    font-weight: 700;
+    color: #334155;
+}
+
+.sidebar-notice {
+    margin-top: 1rem;
+    padding: 0.85rem;
+    border-radius: 14px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #9a3412;
+    font-size: 0.76rem;
+    line-height: 1.55;
+}    
 """
 
 def render_header(today_info):
